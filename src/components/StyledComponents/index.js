@@ -42,3 +42,4 @@ export const AuthButtons = styled(Button)(({ theme }) => ({
   borderRadius: "2px",
   textTransform: "none",
 }));
+
