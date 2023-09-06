@@ -1,4 +1,12 @@
-import { Box, AppBar, Tabs, Tab, Button } from "@mui/material";
+import {
+  Box,
+  AppBar,
+  Tabs,
+  Tab,
+  Button,
+  TextField,
+  IconButton,
+} from "@mui/material";
 import styled from "@emotion/styled";
 import mainImage from "../../assets/images/mainNavigationImage.jpg";
 
@@ -26,11 +34,9 @@ export const SearchTabsWrapper = styled(Tabs)({
   "& .Mui-selected": {
     color: "#ffffff",
   },
-  
 });
 
 export const SearchTabWrapper = styled(Tab)(({ theme }) => ({
-  fontWeight: 700,
   color: "white",
   textDecoration: "none",
   textTransform: "none",
@@ -41,4 +47,38 @@ export const AuthButtons = styled(Button)(({ theme }) => ({
   color: "white",
   borderRadius: "2px",
   textTransform: "none",
+}));
+
+export const SearchBarWrapper = styled(Box)(({ theme }) => ({
+  display: "flex",
+  maxWidth: "45%",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  paddingTop: "10px",
+}));
+
+export const SearchTextWrapper = styled(TextField)(({ theme }) => ({
+  mt: 2,
+  mb: 2,
+  backgroundColor: "white",
+}));
+
+export const SearchButtonWrapper = styled(IconButton)(({ theme }) => ({
+  backgroundColor: "#c82021",
+  borderRadius: "0px",
+}));
+
+export const BarButtonsWrapper = styled(Button)(({ theme }) => ({
+  backgroundColor: "#c82021",
+  color: "white",
+  borderRadius: "0px",
+  gap: '1rem',
+  textTransform: "none"
+}));
+
+export const AuthWrapper = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexFlow: 'row',
+  maxWidth: '100%',
+  gap: '0.6rem',
 }));

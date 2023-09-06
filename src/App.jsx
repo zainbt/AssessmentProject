@@ -1,11 +1,16 @@
-import { useDispatch } from "react-redux";
-import "./App.css";
-import { MainNavigationCard } from "./components/MainNavigation/MainNavigationCard";
-import { useQuery } from "@tanstack/react-query";
-import { getProperties } from "./api/properties";
-import { properties } from "./store/properties";
-import CustomCard from "./components/ui/card/Card";
-import { Box } from "@mui/material";
+import { ThemeProvider } from '@emotion/react'
+import './App.css'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RootLayout } from './pages/RootLayout';
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+  }
+]);
+
 
 function App() {
   const dispatch = useDispatch();
@@ -24,13 +29,10 @@ function App() {
     return <pre>{JSON.stringify(videosQuery.error)}</pre>;
   }
   return (
-    <>
-      <MainNavigationCard />
-      <Box sx={{ padding: "80px" }}>
-        <CustomCard />
-      </Box>
-    </>
-  );
+    <ThemeProvider theme={theme} >
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  )
 }
 
 export default App;

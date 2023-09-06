@@ -2,10 +2,9 @@ import { React, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { BarButtonsWrapper, SearchBarWrapper, SearchButtonWrapper, SearchTextWrapper } from "../../StyledComponents";
 
-export const SearchInput = (props) => {
+export const SearchSellInput = (props) => {
     const [query, setQuery] = useState("");
-    const { value, index, placeholder } = props; // value is the current tab index, index is the index of the tab
-
+    const { value, index, placeholder } = props; // value is the current tab index, index is the index of the tab   
     return (
         <div
             role="tabpanel"
@@ -26,9 +25,9 @@ export const SearchInput = (props) => {
                     variant="outlined"
                     fullWidth
                 />
-                <SearchButtonWrapper>
-                    <SearchIcon />
-                </SearchButtonWrapper>
+                <BarButtonsWrapper variant="contained" size="medium">
+                    Next
+                </BarButtonsWrapper>
             </SearchBarWrapper >
         </div>
     );
