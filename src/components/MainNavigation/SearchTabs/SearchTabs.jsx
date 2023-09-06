@@ -42,7 +42,9 @@ export const SearchTabs = () => {
                     value={value} onChange={(e, newValue) => { setValue(newValue) }} aria-label="basic tabs example">
                     {tabItems}
                 </SearchTabsWrapper>
-                <SearchInput />
+                <SearchInput value={value} index={0} placeholder={"Buy"} />
+                <SearchInput value={value} index={1} placeholder={"Rent"} />
+                <SearchInput value={value} index={2} placeholder={"Sell"} />
             </Box>
         </Box>
     )
