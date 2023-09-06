@@ -1,13 +1,22 @@
+import { ThemeProvider } from '@emotion/react'
 import './App.css'
-import { MainNavigationCard } from './components/MainNavigation/MainNavigationCard'
- 
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RootLayout } from './pages/RootLayout';
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+  }
+]);
 
 
 function App() {
   return (
-    <>
-     <MainNavigationCard />
-    </>
+    <ThemeProvider theme={theme} >
+      <RouterProvider router={router} />
+    </ThemeProvider>
   )
 }
 

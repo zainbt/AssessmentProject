@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
-import { NavigationWrapper, AuthButtons } from '../StyledComponents';
+import { NavigationWrapper } from '../StyledComponents';
 import { useSelector } from 'react-redux';
-import { ButtonGroup, MenuItem, Tooltip, Button, Avatar, Menu, Typography, IconButton, Toolbar, Box } from '@mui/material';
+import { MenuItem, Tooltip, Button, Avatar, Menu, Typography, IconButton, Toolbar, Box } from '@mui/material';
+import { AuthComponent } from './Authentication/AuthComponent';
 
 
 const pages = ['Buy', 'Sell', 'Rent', 'Mortgage', 'Agent'];
@@ -137,7 +137,7 @@ export function MainNavigationBar() {
                         <Button
                             key={page}
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block',textTransform: "none" }}
+                            sx={{ my: 2, color: 'white', display: 'block', textTransform: "none" }}
                         >
                             {page}
                         </Button>
@@ -146,7 +146,7 @@ export function MainNavigationBar() {
 
 
                 {user && UserMenu}
-                {!user && <AuthCompenent />}
+                {!user && <AuthComponent />}
 
             </Toolbar>
 
@@ -154,24 +154,3 @@ export function MainNavigationBar() {
     );
 }
 
-const AuthCompenent = () => {
-    const handleLoginButton = (event) => {
-        event.preventDefault();
-    }
-    const handleRegisterButton = (event) => {
-        event.preventDefault();
-    }
-
-    return (
-        <Box sx={{
-            display: 'flex',
-            flexFlow: 'row',
-            maxWidth: '100%',
-            gap: '0.6rem',
-        }}>
-            <AuthButtons size='small' variant='outlined' onClick={handleLoginButton}>Log In</AuthButtons>
-            <AuthButtons size='small' variant='outlined' onClick={handleRegisterButton}>Sign Up</AuthButtons>
-        </Box>
-
-    );
-}

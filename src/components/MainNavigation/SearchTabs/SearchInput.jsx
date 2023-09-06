@@ -1,11 +1,10 @@
-import { Box, TextField, InputAdornment, IconButton } from "@mui/material";
 import { React, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
+import { BarButtonsWrapper, SearchBarWrapper, SearchButtonWrapper, SearchTextWrapper } from "../../StyledComponents";
 
 export const SearchInput = (props) => {
     const [query, setQuery] = useState("");
     const { value, index, placeholder } = props; // value is the current tab index, index is the index of the tab
-
 
     return (
         <div
@@ -14,19 +13,8 @@ export const SearchInput = (props) => {
             id={`simple-tabpanel-${index}`}
             aria-labelledby={`simple-tab-${index}`}
         >
-            <Box sx={{
-                display: 'flex',
-                maxWidth: '50%',
-                justifyContent: 'flex-start',
-                alignItems: 'center',
-            }}>
-                <TextField
-                    sx={{
-                        mt: 2,
-                        mb: 2,
-                        backgroundColor: 'white',
-                        padding: 0,
-                    }}
+            <SearchBarWrapper>
+                <SearchTextWrapper
                     size="small"
                     id="search-bar"
                     placeholder={placeholder}
@@ -38,14 +26,10 @@ export const SearchInput = (props) => {
                     variant="outlined"
                     fullWidth
                 />
-                <IconButton sx={{
-                    backgroundColor: '#c82021',
-                    borderRadius: '0px'
-                }}>
+                <SearchButtonWrapper>
                     <SearchIcon />
-                </IconButton>
-            </Box >
+                </SearchButtonWrapper>
+            </SearchBarWrapper >
         </div>
     );
 }
-

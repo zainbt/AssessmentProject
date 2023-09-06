@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { SearchTabsWrapper, SearchTabWrapper } from '../../StyledComponents';
 import { CustomSearchHeader } from './CustomSearchHeadery';
 import { SearchInput } from './SearchInput';
+import { SearchSellInput } from './SearchSellInput';
 
 const tabs = [{
     tabName: 'Buy'
@@ -44,7 +45,7 @@ export const SearchTabs = () => {
                 </SearchTabsWrapper>
                 <SearchInput value={value} index={0} placeholder={"Buy"} />
                 <SearchInput value={value} index={1} placeholder={"Rent"} />
-                <SearchInput value={value} index={2} placeholder={"Sell"} />
+                <SearchSellInput value={value} index={2} placeholder={"Sell"} />
             </Box>
         </Box>
     )
