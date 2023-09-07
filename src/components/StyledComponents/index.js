@@ -7,9 +7,11 @@ import {
   TextField,
   IconButton,
   Dialog,
+  Chip,
 } from "@mui/material";
 import styled from "@emotion/styled";
 import mainImage from "../../assets/images/mainNavigationImage.jpg";
+import { emphasize } from "@mui/material/styles";
 
 export const NavigationCardWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -130,4 +132,22 @@ export const ButtonOauthWrapper = styled(Button)(({ theme }) => ({
   textTransform: "none",
   height: "100%",
   pt: "0.5rem",
+}));
+
+
+export const StyledTab = styled(Chip)(({ theme }) => ({
+  // const backgroundColor = theme.palette.secondary.main;
+
+  height: "30px",
+  borderRadius: "15px",
+
+  // color: theme.palette.text.primary,
+  // fontWeight: theme.typography.fontWeightRegular,
+  // "&:hover, &:focus": {
+  //   backgroundColor: emphasize(backgroundColor, 0.06),
+  // },
+  // "&:active": {
+  //   boxShadow: theme.shadows[1],
+  //   backgroundColor: emphasize(backgroundColor, 0.12),
+  // },
 }));
