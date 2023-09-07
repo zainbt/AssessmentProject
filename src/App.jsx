@@ -7,7 +7,6 @@ import { useQuery } from "@tanstack/react-query";
 import { getProperties } from "./api/properties";
 import { properties } from "./store/properties";
 import { theme } from "./theme/Theme";
-import CustomCard from "./components/ui/card/Card";
 import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
@@ -17,17 +16,16 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage/>
-      }
-    ]
+        element: <HomePage />,
+      },
+    ],
   },
-
 ]);
 
 function App() {
   const dispatch = useDispatch();
 
-  const videosQuery = useQuery({
+  const propertiesQuery = useQuery({
     queryKey: ["properties"],
     queryFn: getProperties,
     onSuccess: (data) => {
@@ -35,9 +33,9 @@ function App() {
       dispatch(properties(data.properties));
     },
   });
-  if (videosQuery?.isLoading) return <h1>Loading...</h1>;
-  if (videosQuery?.error) {
-    return <pre>{JSON.stringify(videosQuery.error)}</pre>;
+  if (propertiesQuery?.isLoading) return <h1>Loading...</h1>;
+  if (propertiesQuery?.error) {
+    return <pre>{JSON.stringify(propertiesQuery.error)}</pre>;
   }
   return (
     <ThemeProvider theme={theme}>
