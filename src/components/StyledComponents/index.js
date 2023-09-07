@@ -6,6 +6,7 @@ import {
   Button,
   TextField,
   IconButton,
+  Dialog,
 } from "@mui/material";
 import styled from "@emotion/styled";
 import mainImage from "../../assets/images/mainNavigationImage.jpg";
@@ -72,8 +73,11 @@ export const BarButtonsWrapper = styled(Button)(({ theme }) => ({
   backgroundColor: "#c82021",
   color: "white",
   borderRadius: "0px",
-  gap: '1rem',
-  textTransform: "none"
+  fontSize: "1rem",
+  fontWeight: "bold",
+  textTransform: "none",
+  height: "100%",
+  width: '193px'
 }));
 
 export const AuthWrapper = styled(Box)(({ theme }) => ({
@@ -81,4 +85,49 @@ export const AuthWrapper = styled(Box)(({ theme }) => ({
   flexFlow: 'row',
   maxWidth: '100%',
   gap: '0.6rem',
+}));
+
+export const SearchBarSellWrapper = styled(Box)(({ theme }) => ({
+  display: "flex",
+  maxWidth: "50%",
+  gap: "0.8rem",
+  alignItems: "center",
+  paddingTop: "10px",
+}));
+
+export const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  '& .MuiDialogContent-root': {
+    padding: theme.spacing(2),
+  },
+  '& .MuiDialog-paper': {
+    borderRadius: 0,
+  },
+  '& .MuiDialogActions-root': {
+    padding: theme.spacing(1),
+  },
+  maxWidth: '400px',
+  margin: 'auto',
+}));
+
+export const ButtonDefaultWrapper = styled(Button)(({ theme }) => ({
+  backgroundColor: "#c82021",
+  color: "white",
+  borderRadius: "0px",
+  fontSize: "1rem",
+  fontWeight: "bold",
+  textTransform: "none",
+  height: "100%",
+  pt: "0.5rem",
+}));
+
+export const ButtonOauthWrapper = styled(Button)(({ theme }) => ({
+  color: "black",
+  display: "flex",
+  gap: "0.5rem",
+  borderRadius: "0px",
+  fontSize: "1rem",
+  fontWeight: "bold",
+  textTransform: "none",
+  height: "100%",
+  pt: "0.5rem",
 }));

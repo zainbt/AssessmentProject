@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import { BarButtonsWrapper, SearchBarWrapper, SearchButtonWrapper, SearchTextWrapper } from "../../StyledComponents";
+import { BarButtonsWrapper, SearchBarSellWrapper, SearchBarWrapper, SearchButtonWrapper, SearchTextWrapper } from "../../StyledComponents";
 
 export const SearchSellInput = (props) => {
     const [query, setQuery] = useState("");
@@ -12,7 +12,7 @@ export const SearchSellInput = (props) => {
             id={`simple-tabpanel-${index}`}
             aria-labelledby={`simple-tab-${index}`}
         >
-            <SearchBarWrapper>
+            <SearchBarSellWrapper>
                 <SearchTextWrapper
                     size="small"
                     id="search-bar"
@@ -28,7 +28,7 @@ export const SearchSellInput = (props) => {
                 <BarButtonsWrapper variant="contained" size="medium">
                     Next
                 </BarButtonsWrapper>
-            </SearchBarWrapper >
+            </SearchBarSellWrapper >
         </div>
     );
 }

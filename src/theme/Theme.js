@@ -12,6 +12,7 @@ export const theme = createTheme({
     },
     typography: {
       
+      color: '#000000',
       fontFamily: 'Libre Franklin,-apple-system,BlinkMacSystemFont,Roboto,Droid Sans,Helvetica,Arial,sans-serif',
     },
     // Add more theme customization options as needed
