@@ -6,9 +6,11 @@ import {
   Button,
   TextField,
   IconButton,
+  Chip,
 } from "@mui/material";
 import styled from "@emotion/styled";
 import mainImage from "../../assets/images/mainNavigationImage.jpg";
+import { emphasize } from "@mui/material/styles";
 
 export const NavigationCardWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -72,13 +74,30 @@ export const BarButtonsWrapper = styled(Button)(({ theme }) => ({
   backgroundColor: "#c82021",
   color: "white",
   borderRadius: "0px",
-  gap: '1rem',
-  textTransform: "none"
+  gap: "1rem",
+  textTransform: "none",
 }));
 
 export const AuthWrapper = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexFlow: 'row',
-  maxWidth: '100%',
-  gap: '0.6rem',
+  display: "flex",
+  flexFlow: "row",
+  maxWidth: "100%",
+  gap: "0.6rem",
+}));
+
+export const StyledTab = styled(Chip)(({ theme }) => ({
+  // const backgroundColor = theme.palette.secondary.main;
+
+  height: "30px",
+  borderRadius: "15px",
+
+  // color: theme.palette.text.primary,
+  // fontWeight: theme.typography.fontWeightRegular,
+  // "&:hover, &:focus": {
+  //   backgroundColor: emphasize(backgroundColor, 0.06),
+  // },
+  // "&:active": {
+  //   boxShadow: theme.shadows[1],
+  //   backgroundColor: emphasize(backgroundColor, 0.12),
+  // },
 }));

@@ -13,7 +13,7 @@ export const SearchInput = (props) => {
             id={`simple-tabpanel-${index}`}
             aria-labelledby={`simple-tab-${index}`}
         >
-            <SearchBarWrapper>
+            <SearchBarWrapper >
                 <SearchTextWrapper
                     size="small"
                     id="search-bar"
